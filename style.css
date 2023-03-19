@@ -1,0 +1,10 @@
+
+
+.col {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+#pageContent {
+    height: 700px;
+}
