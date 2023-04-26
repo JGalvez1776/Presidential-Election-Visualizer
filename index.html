@@ -15,12 +15,16 @@
 
     <div id="headerBar">
         <h1>Presidential Election Visualizer</h1>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button id="adjacentView" type="button" class="btn btn-secondary">Adjacent</button>
+            <button id="tableView" type="button" class="btn btn-secondary">Table</button>
+        </div>
     </div>
 
     <div class="container-fluid">
         <div class="row h-100">
-            <div id="election-table" class="col"></div>
-            <div id="election-map" class="col"></div>
+            <div id="left" class="col"></div>
+            <div id="right" class="col"></div>
         </div>
     </div>
 
@@ -29,11 +33,21 @@
     </div>
 
 
-    <!-- Load d3 -->
-    <script src = "https://d3js.org/d3.v4.min.js"></script>    
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+
     <!-- Load main.js -->
+    <script src="data/usa.js"></script>
+    <script src="data/president_data.js"></script>
+    <script src="map.js"></script>
+    <script src="table.js"></script>
     <script src="createComponents.js"></script>
     <script src="main.js"></script>
+
+    <script>main({type: "table"})</script>
     
 
   </body>
